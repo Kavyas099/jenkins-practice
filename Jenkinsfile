@@ -53,6 +53,10 @@ pipeline {
             }
 
             stage ('Deploy') {
+                input {
+                    message "shouls we contine"
+                    ok "yes we should"
+                }
                 steps {
                     script {
                         sh """
