@@ -23,7 +23,7 @@ deploy = "qa"
             stage ('build') {
                 steps {
                     script {
-                        sh """
+                        sh '''
                        echo "Hello, this is build"
                     echo "Project: $PROJECT"
                     echo "Hello ${params.PERSON}"
@@ -35,10 +35,10 @@ deploy = "qa"
                     echo "Choice: ${params.CHOICE}"
 
                     echo "Password: ${params.PASSWORD}"
-
-                        sh """
+ sh '''
+                        
                         sleep 15
-                        sh """
+                       
                     }
                 }
             }
@@ -51,9 +51,9 @@ deploy = "qa"
 
                 steps {
                     script {
-                        sh """
+                        sh '''
                         echo "hello its a test"
-                        sh """
+                        sh '''
                     }
                 }
             }
@@ -65,9 +65,9 @@ deploy = "qa"
                 }
                 steps {
                     script {
-                        sh """
+                        sh '''
                         echo "hello its deploy"
-                        sh """
+                        sh '''
                     }
                 }
             }
@@ -88,3 +88,4 @@ post {
         echo "i will run when pipleine is sucess"
     }
 }
+                    }
