@@ -38,12 +38,13 @@ deploy = "qa"
 
                         sh """
                         sleep 15
+                        sh """
                     }
                 }
             }
 
             when {
-                environment name: 'deploy',  value:'prod'
+                environment name: 'deploy',  value: 'prod'
             }
 
             stage ('test') {
