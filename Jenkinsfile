@@ -1,5 +1,5 @@
 pipeline {
-    agent  { label 'kavya'} {
+    agent  { label 'kavya'} 
         stages {
             stage ('build') {
                 steps {
@@ -31,8 +31,8 @@ pipeline {
                 }
             }
         }
-    }
-}
+    
+
 
 post {
     always {
@@ -46,4 +46,5 @@ post {
     success{
         echo "i will run when pipleine is sucess"
     }
+}
 }
