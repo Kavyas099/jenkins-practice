@@ -33,3 +33,17 @@ pipilne {
         }
     }
 }
+
+post {
+    always {
+        echo " i will say hellow again"
+    }
+
+    failure {
+        echo "i wikk run when pipeline is failed"
+    }
+
+    success{
+        echo "i will run when pipleine is sucess"
+    }
+}
