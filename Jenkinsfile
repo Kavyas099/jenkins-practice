@@ -43,11 +43,12 @@ deploy = "qa"
                 }
             }
 
-            when {
+           
+            stage ('test') {
+             when {
                 environment name: 'deploy',  value: 'prod'
             }
 
-            stage ('test') {
                 steps {
                     script {
                         sh """
