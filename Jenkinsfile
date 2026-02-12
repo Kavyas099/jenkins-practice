@@ -46,7 +46,7 @@ deploy = "qa"
            
             stage ('test') {
              when {
-                environment name: 'deploy',  value: 'prod'
+                environment name: 'deploy',  value: 'qa'
             }
 
                 steps {
