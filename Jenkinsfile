@@ -1,4 +1,4 @@
-pipilne {
+pipeline {
     agent  { label 'kavya'} {
         stages {
             stage ('build') {
