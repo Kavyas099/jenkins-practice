@@ -4,7 +4,7 @@ pipeline {
         project = 'expense'
         
         component = 'backend'
-
+deploy = "qa"
 
     } 
 
@@ -40,6 +40,10 @@ pipeline {
                         sleep 15
                     }
                 }
+            }
+
+            when {
+                environment name: 'deply'  value:'prod'
             }
 
             stage ('test') {
